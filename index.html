@@ -23,7 +23,8 @@
       --line: #cfe6ee;
     }
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    html { height: 100%; }
+    body { min-height: 100%; }
     body {
       margin: 0;
       background: #fff;
@@ -86,6 +87,30 @@
     }
     .button:focus-visible { outline: 3px solid var(--line); outline-offset: 3px; }
     .button svg { width: 20px; height: 20px; fill: currentColor; }
+    .projects { margin-top: 36px; }
+    .projects h2 {
+      margin: 0 0 12px;
+      font-size: .85rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .project {
+      display: block;
+      padding: 16px 20px;
+      border: 2px dashed var(--line);
+      border-radius: 20px;
+      background: var(--foam);
+      color: var(--ink);
+      text-align: left;
+      text-decoration: none;
+      transition: border-color .15s, background-color .15s;
+    }
+    .project:hover, .project:focus-visible { border-color: var(--shark-deep); background: #dcf0f4; }
+    .project:focus-visible { outline: 3px solid var(--line); outline-offset: 3px; }
+    .project strong { display: block; font-size: 1.1rem; color: var(--shark-deep); }
+    .project span { display: block; margin-top: 4px; font-size: .95rem; line-height: 1.45; }
+    .project-source { display: inline-block; margin-top: 10px; font-size: .85rem; color: var(--ink-soft); }
     footer {
       margin-top: 40px;
       font-size: .85rem;
@@ -115,6 +140,14 @@
         X
       </a>
     </div>
+    <section class="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <a class="project" href="https://frontier-human.sharkyloop.com/">
+        <strong>FrontierHuman</strong>
+        <span>An intent-detection benchmark for humans. An agent asks a question, the human answers tersely, and you pick what they actually meant.</span>
+      </a>
+      <a class="project-source" href="https://github.com/sharkyloop/frontier-human">Source on GitHub</a>
+    </section>
   </main>
   <footer>&copy; sharkyloop</footer>
 </body>
